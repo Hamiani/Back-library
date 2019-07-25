@@ -44,7 +44,7 @@ public class BookController {
 	
 	@PostMapping(value = "/bookResource")
 	@ResponseStatus(code = HttpStatus.CREATED)
-	public BookDto createCommunication(@ModelAttribute BookDto bookDto)
+	public BookDto createBook(@ModelAttribute BookDto bookDto)
 			throws ParseException {
 
 		this.logger.debug("REST request to save Book : {}", bookDto);
@@ -58,7 +58,7 @@ public class BookController {
 	
 	@PutMapping(value = "/bookResource/{book_id}")
 	@ResponseStatus(code = HttpStatus.OK)
-	public BookDto updateCommunication(@PathVariable String book_id,
+	public BookDto updateBook(@PathVariable String book_id,
 			@ModelAttribute BookDto bookDto) throws ParseException {
 
 		this.logger.debug("REST request to update Book : {}", bookDto);
